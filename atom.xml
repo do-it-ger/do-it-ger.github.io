@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>d.o.it - Let&#39;s try things</title>
+  
+  <subtitle>Let&#39;s try things</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://do-it-ger.github.io/"/>
+  <updated>2019-03-19T14:36:35.286Z</updated>
+  <id>https://do-it-ger.github.io/</id>
+  
+  <author>
+    <name>Powered by d.o.it</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://do-it-ger.github.io/2019/03/20/hello-world/"/>
+    <id>https://do-it-ger.github.io/2019/03/20/hello-world/</id>
+    <published>2019-03-20T16:18:43.842Z</published>
+    <updated>2019-03-19T14:36:35.286Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is the first blog post from Hexo. Focus on content - not on design. </p><h2 id="Hexo-try-it-out"><a href="#Hexo-try-it-out" class="headerlink" title="Hexo - try it out"></a>Hexo - try it out</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is the first blog post from Hexo. Focus on content - not on design. &lt;/p&gt;
+&lt;h2 id=&quot;Hexo-try-it-out&quot;&gt;&lt;a href=&quot;#Hexo-try-it-out&quot; class=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Get Licenses from used NuGet Packages for .NET Core Solution</title>
+    <link href="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/"/>
+    <id>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</id>
+    <published>2019-03-19T14:47:47.000Z</published>
+    <updated>2019-03-19T16:03:50.008Z</updated>
+    
+    <content type="html"><![CDATA[<p>ToDo: Get all Licenses from used NuGet Packages for a licence text file</p><p>Let’s do it…</p><h2 id="Solution-1-Get-Package"><a href="#Solution-1-Get-Package" class="headerlink" title="Solution 1 - Get-Package"></a>Solution 1 - Get-Package</h2><ul><li>Open Visual Studio .NET Core Solution </li><li><p>Open Package Manager Console and execute:</p><p> Get-Package | Select-Object Id,LicenseUrl</p><p>Result:</p><p> xunit.runner.visualstudio                               <a href="https://raw.githubusercontent.com/xunit/xunit/master/license.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/xunit/xunit/master/license.txt</a><br> NSubstitute                                             <a href="https://github.com/nsubstitute/NSubstitute/raw/master/LICENSE.txt" target="_blank" rel="noopener">https://github.com/nsubstitute/NSubstitute/raw/master/LICENSE.txt</a>         </p></li></ul><p>Good… but only the direct reference project nuget package. Need also the Licence of all dlls.</p><h2 id="Solution-2-PowerShell-Save-license-as-text-file"><a href="#Solution-2-PowerShell-Save-license-as-text-file" class="headerlink" title="Solution 2 - PowerShell: Save license as text file"></a>Solution 2 - PowerShell: Save license as text file</h2><p>Try out with the PowerShell script. Save the code as DownloadNugetLicense.ps1 in the VS solution director.</p><p>Run the PowerShell Script with  ./DownloadNugetLicense.ps1 inthe VS Package Manager Console.</p><h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code>Split-Path -parent $dte.Solution.FileName | cd; New-Item -ItemType Directory -Force -Path &quot;.\licenses&quot;;@( Get-Project -All | ? { $_.ProjectName } | % {    Get-Package -ProjectName $_.ProjectName | ? { $_.LicenseUrl }} ) | Sort-Object Id -Unique | % {    $pkg = $_;    Try {        if ($pkg.Id -notlike &apos;microsoft*&apos; -and $pkg.LicenseUrl.StartsWith(&apos;http&apos;)) {            Write-Host (&quot;Download license for nuget package &quot; + $pkg.Id + &quot; from &quot; + $pkg.LicenseUrl);            #Write-Host (ConvertTo-Json ($pkg));            $licenseUrl = $pkg.LicenseUrl            if ($licenseUrl.contains(&apos;github.com&apos;)) {                $licenseUrl = $licenseUrl.replace(&quot;/blob/&quot;, &quot;/raw/&quot;)            }            $extension = &quot;.txt&quot;            if ($licenseUrl.EndsWith(&quot;.md&quot;)) {                $extension = &quot;.md&quot;            }            (New-Object System.Net.WebClient).DownloadFile($licenseUrl, (Join-Path (pwd) &apos;licenses\&apos;) + $pkg.Id + $extension);        }    }    Catch [system.exception] {        Write-Host (&quot;Could not download license for &quot; + $pkg.Id)    }}</code></pre><h2 id="Solution-3-PowerShell-All-license-in-package-manager-output"><a href="#Solution-3-PowerShell-All-license-in-package-manager-output" class="headerlink" title="Solution 3 - PowerShell: All license in package manager output"></a>Solution 3 - PowerShell: All license in package manager output</h2><h2 id="Not-perfect"><a href="#Not-perfect" class="headerlink" title="Not perfect:"></a>Not perfect:</h2><pre><code>NuGet Package License---------------------Id      |      LicenseUrl  |    License---------------------Abp.AspNetCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.AspNetCore.SignalR; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.AutoMapper; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.Castle.Log4Net; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.HangFire; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.RedisCache; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.TestBase; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.ZeroCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)Abp.ZeroCore.EntityFrameworkCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)AspNet.Security.OpenIdConnect.Server; http://www.apache.org/licenses/LICENSE-2.0.html; &lt;!DOCTYPE html&gt;Castle.Core; http://www.apache.org/licenses/LICENSE-2.0.html; &lt;!DOCTYPE html&gt;</code></pre><h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><pre><code>Write-Host(&quot;---------------------&quot;);Write-Host(&quot;NuGet Package License&quot;);Write-Host(&quot;---------------------&quot;);Write-Host(&quot;Id      |      LicenseUrl  |    License&quot;); Write-Host(&quot;---------------------&quot;);@( Get-Project -All | ? { $_.ProjectName } | % {    Get-Package -ProjectName $_.ProjectName | ? { $_.LicenseUrl }} ) | Sort-Object Id -Unique | % {    $pkg = $_;    $file =     Try {        if ($pkg.Id -notlike &apos;microsoft*&apos; -and $pkg.LicenseUrl.StartsWith(&apos;http&apos;)) {            $licenseUrl = $pkg.LicenseUrl            if ($licenseUrl.contains(&apos;github.com&apos;)) {                $licenseUrl = $licenseUrl.replace(&quot;/blob/&quot;, &quot;/raw/&quot;)            }            $extension = &quot;.txt&quot;            if ($licenseUrl.EndsWith(&quot;.md&quot;)) {                $extension = &quot;.md&quot;            }            $filePath = (Join-Path (pwd) &apos;licenses\&apos;) + $pkg.Id + $extension;            $textLicence = Get-Content $filePath | Select-Object -First 1            Write-Host($pkg.Id + &quot;; &quot; + $_.LicenseUrl + &quot;; &quot; + $textLicence);        }    }    Catch [system.exception] {    Write-Host ($error[0].Exception);        Write-Host (&quot;Could not read license for &quot; + $pkg.Id)    }}</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><p>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.</p><p><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a></p><h3 id="Package-Folder"><a href="#Package-Folder" class="headerlink" title="Package Folder"></a>Package Folder</h3><p>Package Folder not exist for the solution?</p><h4 id="NuGet-Config"><a href="#NuGet-Config" class="headerlink" title="NuGet.Config"></a>NuGet.Config</h4><p>Create Nuget.Config for the solution.</p><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;configuration&gt;&lt;config&gt;    &lt;add key=&quot;globalPackagesFolder&quot; value=&quot;.\packages&quot; /&gt;&lt;/config&gt;&lt;/configuration&gt;</code></pre><p><img src="../../list_package_licenses.jpg"><br><br><img src="list_package_licenses.jpg" alt="pic"></p><h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><p>TODO</p><p><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ToDo: Get all Licenses from used NuGet Packages for a licence text file&lt;/p&gt;
+&lt;p&gt;Let’s do it…&lt;/p&gt;
+&lt;h2 id=&quot;Solution-1-Get-Package&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
