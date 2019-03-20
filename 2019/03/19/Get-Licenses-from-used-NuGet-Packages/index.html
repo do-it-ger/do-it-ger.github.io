@@ -5,20 +5,20 @@
   
   <title>Get Licenses from used NuGet Packages for .NET Core Solution | d.o.it - Let&#39;s try things</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="ToDo: Get all Licenses from used NuGet Packages for a licence text file Let’s do it… Solution 1 - Get-Package Open Visual Studio .NET Core Solution  Open Package Manager Console and execute:  Get-Pack">
+  <meta name="description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
 <meta name="keywords" content="web, crm, erp, iot, .net core, azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
 <meta property="og:url" content="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/index.html">
 <meta property="og:site_name" content="d.o.it - Let&#39;s try things">
-<meta property="og:description" content="ToDo: Get all Licenses from used NuGet Packages for a licence text file Let’s do it… Solution 1 - Get-Package Open Visual Studio .NET Core Solution  Open Package Manager Console and execute:  Get-Pack">
+<meta property="og:description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://do-it-ger.github.io/2019/03/list_package_licenses.jpg">
 <meta property="og:image" content="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/list_package_licenses.jpg">
-<meta property="og:updated_time" content="2019-03-19T16:03:50.008Z">
+<meta property="og:updated_time" content="2019-03-20T16:45:14.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
-<meta name="twitter:description" content="ToDo: Get all Licenses from used NuGet Packages for a licence text file Let’s do it… Solution 1 - Get-Package Open Visual Studio .NET Core Solution  Open Package Manager Console and execute:  Get-Pack">
+<meta name="twitter:description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
 <meta name="twitter:image" content="https://do-it-ger.github.io/2019/03/list_package_licenses.jpg">
 <meta name="twitter:creator" content="@dmmotec">
   
@@ -76,8 +76,8 @@
 	</header>
 	<div class="entry-content">
 		
-    	<p>ToDo: Get all Licenses from used NuGet Packages for a licence text file</p>
-<p>Let’s do it…</p>
+    	<p>ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File.</p>
+<h1 id="Let’s-try-something…"><a href="#Let’s-try-something…" class="headerlink" title="Let’s try something…"></a>Let’s try something…</h1><p>Best solution so far: jump to <a href="#solution4">Solution 4</a> or <a href="#solution5">Solution 5</a></p>
 <h2 id="Solution-1-Get-Package"><a href="#Solution-1-Get-Package" class="headerlink" title="Solution 1 - Get-Package"></a>Solution 1 - Get-Package</h2><ul>
 <li>Open Visual Studio .NET Core Solution </li>
 <li><p>Open Package Manager Console and execute:</p>
@@ -86,7 +86,7 @@
 <p> xunit.runner.visualstudio                               <a href="https://raw.githubusercontent.com/xunit/xunit/master/license.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/xunit/xunit/master/license.txt</a><br> NSubstitute                                             <a href="https://github.com/nsubstitute/NSubstitute/raw/master/LICENSE.txt" target="_blank" rel="noopener">https://github.com/nsubstitute/NSubstitute/raw/master/LICENSE.txt</a>         </p>
 </li>
 </ul>
-<p>Good… but only the direct reference project nuget package. Need also the Licence of all dlls.</p>
+<p>Good… but the direct reference project nuget package. Need also the Licence of all dlls.</p>
 <h2 id="Solution-2-PowerShell-Save-license-as-text-file"><a href="#Solution-2-PowerShell-Save-license-as-text-file" class="headerlink" title="Solution 2 - PowerShell: Save license as text file"></a>Solution 2 - PowerShell: Save license as text file</h2><p>Try out with the PowerShell script. Save the code as DownloadNugetLicense.ps1 in the VS solution director.</p>
 <p>Run the PowerShell Script with  ./DownloadNugetLicense.ps1 inthe VS Package Manager Console.</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code>Split-Path -parent $dte.Solution.FileName | cd; New-Item -ItemType Directory -Force -Path &quot;.\licenses&quot;;
@@ -165,20 +165,9 @@ Write-Host(&quot;---------------------&quot;);
         Write-Host (&quot;Could not read license for &quot; + $pkg.Id)
     }
 }
-</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><p>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.</p>
-<p><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a></p>
-<h3 id="Package-Folder"><a href="#Package-Folder" class="headerlink" title="Package Folder"></a>Package Folder</h3><p>Package Folder not exist for the solution?</p>
-<h4 id="NuGet-Config"><a href="#NuGet-Config" class="headerlink" title="NuGet.Config"></a>NuGet.Config</h4><p>Create Nuget.Config for the solution.</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;configuration&gt;
-&lt;config&gt;
-    &lt;add key=&quot;globalPackagesFolder&quot; value=&quot;.\packages&quot; /&gt;
-&lt;/config&gt;
-&lt;/configuration&gt;
-</code></pre><p><img src="../../list_package_licenses.jpg"><br><br><img src="list_package_licenses.jpg" alt="pic"></p>
-<h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><p>TODO</p>
-<p><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a></p>
+</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br><br>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.<br><br><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a><br><br>### Package Folder<br><br>Package Folder not exist for the solution?<br><br>#### NuGet.Config<br><br>Create Nuget.Config for the solution.<br><br>    &lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br>    <configuration><br>    <config><br>        <add key="globalPackagesFolder" value=".\packages"><br>    </add></config><br>    </configuration><br><br><img src="../../list_package_licenses.jpg"><br><br><img src="list_package_licenses.jpg" alt="pic"><br><br></div>
 
+<h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><div id="solution5"><br><br>TODO<br><br><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a><br><br></div>
     
 	</div>
 	<footer class="entry-footer">
@@ -193,20 +182,6 @@ Write-Host(&quot;---------------------&quot;);
 	</footer>
 	
     
-<nav id="article-nav">
-  
-    <a href="/2019/03/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
