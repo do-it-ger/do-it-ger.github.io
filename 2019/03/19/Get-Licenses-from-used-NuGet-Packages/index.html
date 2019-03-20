@@ -1,81 +1,220 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <title>Get Licenses from used NuGet Packages for .NET Core Solution | d.o.it - Let&#39;s try things</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
-<meta name="keywords" content="License,NuGet,.NET">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
-<meta property="og:url" content="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/index.html">
-<meta property="og:site_name" content="d.o.it - Let&#39;s try things">
-<meta property="og:description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/images/list_package_licenses.jpg">
-<meta property="og:updated_time" content="2019-03-20T17:11:38.345Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
-<meta name="twitter:description" content="ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File. Let’s try s">
-<meta name="twitter:image" content="https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/images/list_package_licenses.jpg">
-<meta name="twitter:creator" content="@dmmotec">
-  
-    <link rel="alternative" href="/atom.xml" title="d.o.it - Let&#39;s try things" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
-</head></html>
-<body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">d.o.it - Let&#39;s try things</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://do-it-ger.github.io"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="post-Get-Licenses-from-used-NuGet-Packages" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2019/03/19/Get-Licenses-from-used-NuGet-Packages/" class="article-date">
-  <time datetime="2019-03-19T14:47:00.000Z" itemprop="datePublished">2019-03-19</time>
-</a>
-		</span>
-		<span class="meta-elements author">Powered by d.o.it</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      Get Licenses from used NuGet Packages for .NET Core Solution
-    </h1>
-  
+<html lang="en">
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File.</p>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Try things like .NET Core, IoT, RFID and other cool stuff.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Powered by d.o.it">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Try things like .NET Core, IoT, RFID and other cool stuff.">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="d.o.it">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://do-it-ger.github.iohttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="https://do-it-ger.github.iohttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Get Licenses from used NuGet Packages for .NET Core Solution - d.o.it</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">d.o.it</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/do-it-ger">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Get Licenses from used NuGet Packages for .NET Core Solution</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by Dominik on
+                        
+                        
+                            2019-03-19
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/License/">#License</a> <a href="/tags/NuGet/">#NuGet</a> <a href="/tags/NET/">#.NET</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Visual-Studio/">Visual Studio</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>ToDo: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File.</p>
 <h1 id="Let’s-try-something…"><a href="#Let’s-try-something…" class="headerlink" title="Let’s try something…"></a>Let’s try something…</h1><p>Best solution so far: jump to <a href="#solution4">Solution 4</a> or <a href="#solution5">Solution 5</a></p>
 <h2 id="Solution-1-Get-Package"><a href="#Solution-1-Get-Package" class="headerlink" title="Solution 1 - Get-Package"></a>Solution 1 - Get-Package</h2><ul>
 <li>Open Visual Studio .NET Core Solution </li>
@@ -164,82 +303,106 @@ Write-Host(&quot;---------------------&quot;);
         Write-Host (&quot;Could not read license for &quot; + $pkg.Id)
     }
 }
-</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br><br>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.<br><br><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a><br><br><strong>Package Folder</strong><br><br>Package Folder not exist for the solution?<br><br><strong>NuGet.Config</strong><br><br>Create Nuget.Config for the solution.<br><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"globalPackagesFolder"</span> <span class="attr">value</span>=<span class="string">".\packages"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br><img src="images/list_package_licenses.jpg" alt="Visual Studio Screenshot"><br><br></div>
+</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br><br>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.<br><br><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a><br><br><strong>Package Folder</strong><br><br>Package Folder not exist for the solution?<br><br><strong>NuGet.Config</strong><br><br>Create Nuget.Config for the solution.<br><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"globalPackagesFolder"</span> <span class="attr">value</span>=<span class="string">".\packages"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br><br><img src="/content/images/list_package_licenses.jpg" alt="Visual Studio Screenshot"><br><br></div>
 
 <h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><div id="solution5"><br><br>TODO<br><br><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a><br><br></div>
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Visual-Studio/">Visual Studio</a>
-  </div>
 
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NET/">.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/License/">License</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NuGet/">NuGet</a></li></ul>
+                
+            </div>
 
-			</span>
-		</div>
-	</footer>
-	
-    
-  
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
 </article>
 
+    <!-- Footer -->
+    <hr>
 
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/dmmotec" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
 
+                    
 
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/d-oit/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="mailto:d-o@arcor.de" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2019 Powered by d.o.it<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
     </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:do-it-ger.github.io">
-  </form>
-</div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">d.o.it - Let&#39;s try things</a>
-	</h1>
-
-	<span class="links">	
-		<p></p><a href="https://www.linkedin.com/in/d-oit">Linkedin</a><p></p>	
-	<p></p><a href="https://www.twitter.com/dmmotec">Twitter</a><p>
-	</p></span>
-		
-	<span class="copyright">
-		&copy; 2019 Powered by d.o.it<br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
 </footer>
+
+
+    <!-- After footer scripts -->
     
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-    <footer class="footer">
-          
-
+<!-- Disqus Comments -->
 
 
 
-
-      <a href="https://www.linkedin.com/in/d-oit"><i class="svg-icon linkedin"></i></a>
-      
-      
-      <a href="https://www.twitter.com/dmmotec"><i class="svg-icon twitter"></i></a>
-      
-      
-      
-              </footer>
-  </div>
 </body>
+
 </html>
