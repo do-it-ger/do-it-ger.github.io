@@ -54,7 +54,7 @@
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2019/03/19/Get-Licenses-from-used-NuGet-Packages/" class="article-date">
-  <time datetime="2019-03-19T14:47:47.000Z" itemprop="datePublished">2019-03-19</time>
+  <time datetime="2019-03-19T14:47:00.000Z" itemprop="datePublished">2019-03-19</time>
 </a>
 		</span>
 		<span class="meta-elements author">Powered by d.o.it</span>
@@ -163,7 +163,7 @@ Write-Host(&quot;---------------------&quot;);
         Write-Host (&quot;Could not read license for &quot; + $pkg.Id)
     }
 }
-</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br><br>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.<br><br><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a><br><br>### Package Folder<br><br>Package Folder not exist for the solution?<br><br>#### NuGet.Config<br><br>Create Nuget.Config for the solution.<br><br>    &lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br>    <configuration><br>    <config><br>        <add key="globalPackagesFolder" value=".\packages"><br>    </add></config><br>    </configuration><br><br><img src="../../list_package_licenses.jpg"><br><br><img src="list_package_licenses.jpg" alt="pic"><br><br></div>
+</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br><br>List license of NuGet packages in ‘packages’ folder of a solution. Infer license from projectUrl and licenseUrl in the package’s metadata. Download license text from GtiHub and spdx.org.<br><br><a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense</a><br><br>### Package Folder<br><br>Package Folder not exist for the solution?<br><br>#### NuGet.Config<br><br>Create Nuget.Config for the solution.<br><br>    &lt;?xml version=”1.0” encoding=”utf-8”?&gt;<br>    <configuration><br>    <config><br>        <add key="globalPackagesFolder" value=".\packages"><br>    </add></config><br>    </configuration><br><br><br><img src="list_package_licenses.jpg" alt="Visual Studio Screenshot"><br><br></div>
 
 <h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><div id="solution5"><br><br>TODO<br><br><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a><br><br></div>
     
@@ -172,9 +172,15 @@ Write-Host(&quot;---------------------&quot;);
 		<div class="entry-meta-footer">
 			<span class="category">
 				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visual-Studio/">Visual Studio</a>
+  </div>
+
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NET/">.NET</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/License/">License</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NuGet/">NuGet</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
