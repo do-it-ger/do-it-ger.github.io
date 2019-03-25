@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://do-it-ger.github.io/"/>
-  <updated>2019-03-25T14:58:35.584Z</updated>
+  <updated>2019-03-25T13:40:07.507Z</updated>
   <id>https://do-it-ger.github.io/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>AppSecret for .NET Core Console</title>
-    <link href="https://do-it-ger.github.io/2019/03/25/AppSecret-for-NET-Core-Console/"/>
-    <id>https://do-it-ger.github.io/2019/03/25/AppSecret-for-NET-Core-Console/</id>
-    <published>2019-03-25T14:58:35.000Z</published>
-    <updated>2019-03-25T14:58:35.584Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Get Licenses from used NuGet Packages for .NET Core Solution</title>

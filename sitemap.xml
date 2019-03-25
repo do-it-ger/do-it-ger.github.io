@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://do-it-ger.github.io/2019/03/25/AppSecret-for-NET-Core-Console/</loc>
-    
-    <lastmod>2019-03-25T14:58:35.584Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</loc>
     
     <lastmod>2019-03-25T13:40:07.507Z</lastmod>
