@@ -2,23 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</loc>
-    
-    <lastmod>2019-03-25T13:40:07.507Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://do-it-ger.github.io/tags/index.html</loc>
     
-    <lastmod>2019-03-20T17:30:29.013Z</lastmod>
+    <lastmod>2019-03-25T16:57:01.479Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://do-it-ger.github.io/categories/index.html</loc>
     
-    <lastmod>2019-03-20T17:30:20.309Z</lastmod>
+    <lastmod>2019-03-25T16:52:11.253Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://do-it-ger.github.io/2019/03/25/Localized-error-message/</loc>
+    
+    <lastmod>2019-03-25T16:39:26.710Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://do-it-ger.github.io/2019/03/25/MS-SQL-Date-Format/</loc>
+    
+    <lastmod>2019-03-25T16:35:32.584Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://do-it-ger.github.io/2019/03/25/Unblock-all-Files-in-Folder-with-PowerShell/</loc>
+    
+    <lastmod>2019-03-25T16:16:43.119Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</loc>
+    
+    <lastmod>2019-03-25T13:40:07.507Z</lastmod>
     
   </url>
   

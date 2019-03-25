@@ -23,7 +23,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Get Licenses from used NuGet Packages for .NET Core Solution">
+        <meta property="og:title" content="Localized error message">
     
 
     <!--Open Graph Description-->
@@ -55,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Get Licenses from used NuGet Packages for .NET Core Solution - d.o.it</title>
+    <title>Localized error message - d.o.it</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -165,15 +165,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Get Licenses from used NuGet Packages for .NET Core Solution</h1>
+                    <h1>Localized error message</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                            Posted by Dominik on
+                            Posted by Powered by d.o.it on
                         
                         
-                            2019-03-19
+                            2019-03-25
                         
                     </span>
                 </div>
@@ -195,7 +195,7 @@
 
 <div class="tag-list">
 
- <div class="tag-item"><a href="/tags/License/">#License</a></div>  <div class="tag-item"><a href="/tags/NuGet/">#NuGet</a></div>  <div class="tag-item"><a href="/tags/NET/">#.NET</a></div>
+ <div class="tag-item"><a href="/tags/Localized-Error/">#Localized Error</a></div>
 
 </div>
                     
@@ -204,7 +204,7 @@
                     
                         
 
-<a href="/categories/Visual-Studio/">Visual Studio</a>
+<a href="/categories/NET/">.NET</a>/ <a href="/categories/NET/Windows/">Windows</a>
 
                     
                 </div>
@@ -215,101 +215,9 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><strong>ToDo</strong>: Get all licenses from used NuGet Packages in the Visual Studio Solution. Create a licence text file or Excel file with all found license and save all licence as a separate Text File.</p>
-<h1 id="Let’s-try…"><a href="#Let’s-try…" class="headerlink" title="Let’s try…"></a>Let’s try…</h1><p>Best solution so far: jump to <a href="#solution4">Solution 4</a> or <a href="#solution5">Solution 5</a></p>
-<h2 id="Solution-1-Get-Package"><a href="#Solution-1-Get-Package" class="headerlink" title="Solution 1 - Get-Package"></a>Solution 1 - Get-Package</h2><ul>
-<li>Open Visual Studio .NET Core Solution </li>
-<li><p>Open Package Manager Console and execute:</p>
-<p> Get-Package | Select-Object Id,LicenseUrl</p>
-</li>
-</ul>
-<p><strong>Output Result (Nuget Package Name, License Url)</strong>:</p>
-<pre><code>xunit.runner.visualstudio                               https://raw.githubusercontent.com/xunit/xunit/master/license.txt                       
-NSubstitute                                             https://github.com/nsubstitute/NSubstitute/raw/master/LICENSE.txt         
-</code></pre><p>Good… but the direct reference project NuGet package. Need also the Licence of all dlls.</p>
-<h2 id="Solution-2-PowerShell-Save-license-as-text-file"><a href="#Solution-2-PowerShell-Save-license-as-text-file" class="headerlink" title="Solution 2 - PowerShell: Save license as text file"></a>Solution 2 - PowerShell: Save license as text file</h2><p>Try out with the PowerShell script. Save the code as DownloadNugetLicense.ps1 in the VS solution director.</p>
-<p>Run the PowerShell Script with  ./DownloadNugetLicense.ps1 inthe VS Package Manager Console.</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><pre><code>Split-Path -parent $dte.Solution.FileName | cd; New-Item -ItemType Directory -Force -Path &quot;.\licenses&quot;;
-@( Get-Project -All | ? { $_.ProjectName } | % {
-    Get-Package -ProjectName $_.ProjectName | ? { $_.LicenseUrl }
-} ) | Sort-Object Id -Unique | % {
-    $pkg = $_;
-    Try {
-        if ($pkg.Id -notlike &apos;microsoft*&apos; -and $pkg.LicenseUrl.StartsWith(&apos;http&apos;)) {
-            Write-Host (&quot;Download license for nuget package &quot; + $pkg.Id + &quot; from &quot; + $pkg.LicenseUrl);
-            #Write-Host (ConvertTo-Json ($pkg));
+                <p>Ever had problem googling localized version of an error message? Then this site is for you!</p>
+<p><a href="http://finderr.net" target="_blank" rel="noopener">FindErr.NET</a></p>
 
-            $licenseUrl = $pkg.LicenseUrl
-            if ($licenseUrl.contains(&apos;github.com&apos;)) {
-                $licenseUrl = $licenseUrl.replace(&quot;/blob/&quot;, &quot;/raw/&quot;)
-            }
-
-            $extension = &quot;.txt&quot;
-            if ($licenseUrl.EndsWith(&quot;.md&quot;)) {
-                $extension = &quot;.md&quot;
-            }
-
-            (New-Object System.Net.WebClient).DownloadFile($licenseUrl, (Join-Path (pwd) &apos;licenses\&apos;) + $pkg.Id + $extension);
-        }
-    }
-    Catch [system.exception] {
-        Write-Host (&quot;Could not download license for &quot; + $pkg.Id)
-    }
-}
-</code></pre><h2 id="Solution-3-PowerShell-All-license-in-package-manager-output"><a href="#Solution-3-PowerShell-All-license-in-package-manager-output" class="headerlink" title="Solution 3 - PowerShell: All license in package manager output"></a>Solution 3 - PowerShell: All license in package manager output</h2><p>Not perfect - I also need the licencse for the used Dlls inside any NuGet Package.</p>
-<pre><code>---------------------
-NuGet Package License
----------------------
-Id      |      LicenseUrl  |    License
----------------------
-Abp.AspNetCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.AspNetCore.SignalR; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.AutoMapper; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.Castle.Log4Net; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.HangFire; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.RedisCache; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.TestBase; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.ZeroCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-Abp.ZeroCore.EntityFrameworkCore; https://github.com/aspnetboilerplate/aspnetboilerplate/blob/master/LICENSE; The MIT License (MIT)
-AspNet.Security.OpenIdConnect.Server; http://www.apache.org/licenses/LICENSE-2.0.html; &lt;!DOCTYPE html&gt;
-Castle.Core; http://www.apache.org/licenses/LICENSE-2.0.html; &lt;!DOCTYPE html&gt;
-</code></pre><h3 id="PowerShell-Code"><a href="#PowerShell-Code" class="headerlink" title="PowerShell Code"></a>PowerShell Code</h3><pre><code>Write-Host(&quot;---------------------&quot;);
-Write-Host(&quot;NuGet Package License&quot;);
-Write-Host(&quot;---------------------&quot;);
-Write-Host(&quot;Id      |      LicenseUrl  |    License&quot;); 
-Write-Host(&quot;---------------------&quot;);
-@( Get-Project -All | ? { $_.ProjectName } | % {
-    Get-Package -ProjectName $_.ProjectName | ? { $_.LicenseUrl }
-} ) | Sort-Object Id -Unique | % {
-    $pkg = $_;
-    $file = 
-    Try {
-        if ($pkg.Id -notlike &apos;microsoft*&apos; -and $pkg.LicenseUrl.StartsWith(&apos;http&apos;)) {
-
-            $licenseUrl = $pkg.LicenseUrl
-            if ($licenseUrl.contains(&apos;github.com&apos;)) {
-                $licenseUrl = $licenseUrl.replace(&quot;/blob/&quot;, &quot;/raw/&quot;)
-            }
-
-            $extension = &quot;.txt&quot;
-            if ($licenseUrl.EndsWith(&quot;.md&quot;)) {
-                $extension = &quot;.md&quot;
-            }
-
-            $filePath = (Join-Path (pwd) &apos;licenses\&apos;) + $pkg.Id + $extension;
-
-            $textLicence = Get-Content $filePath | Select-Object -First 1
-            Write-Host($pkg.Id + &quot;; &quot; + $_.LicenseUrl + &quot;; &quot; + $textLicence);
-        }
-    }
-    Catch [system.exception] {
-    Write-Host ($error[0].Exception);
-        Write-Host (&quot;Could not read license for &quot; + $pkg.Id)
-    }
-}
-</code></pre><h2 id="Solution-4-Visual-Studio-Tool-‘Package-Licenses’"><a href="#Solution-4-Visual-Studio-Tool-‘Package-Licenses’" class="headerlink" title="Solution 4 - Visual Studio Tool ‘Package Licenses’"></a>Solution 4 - Visual Studio Tool ‘Package Licenses’</h2><div id="solution4"><br>Visual Studio 2017 Extension:<br>List license of all NuGet packages inside the ‘packages’ folder of any Visual Studio solution. Refer license from the Nuget Project-Url / License-Url in the package metadata. Download license and license text from GitHub, spdx.org.<br><p><br>  <a href="https://marketplace.visualstudio.com/items?itemName=jz5.PackageLicense" target="_blank" rel="noopener">Visual Studio Marketplace: Package Licenses</a><br></p><br><strong>Package Folder</strong><br><br>Package Folder not exist for the solution?<br><br><strong>NuGet.Config</strong><br><br>Create Nuget.Config for the Visual Studio solution:<br><br><br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"globalPackagesFolder"</span> <span class="attr">value</span>=<span class="string">".\packages"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br><br><img src="/content/images/list_package_licenses.jpg" alt="Visual Studio Screenshot"><br><br></div>
-
-<h3 id="Solution-5-Custom-package-licenses-command-line"><a href="#Solution-5-Custom-package-licenses-command-line" class="headerlink" title="Solution 5 - Custom package licenses command line"></a>Solution 5 - Custom package licenses command line</h3><div id="solution5"><br><br>Create your own license file output (Excel or TEXT) with the following .NET Core Console Project:<br><br><a href="https://github.com/do-it-ger/DoitPackagesLicenses" target="_blank" rel="noopener">https://github.com/do-it-ger/DoitPackagesLicenses</a><br><br><br><br><br></div>
 
                 
             </div>

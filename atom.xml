@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://do-it-ger.github.io/"/>
-  <updated>2019-03-25T13:40:07.507Z</updated>
+  <updated>2019-03-25T16:39:26.710Z</updated>
   <id>https://do-it-ger.github.io/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Localized error message</title>
+    <link href="https://do-it-ger.github.io/2019/03/25/Localized-error-message/"/>
+    <id>https://do-it-ger.github.io/2019/03/25/Localized-error-message/</id>
+    <published>2019-03-25T16:37:00.000Z</published>
+    <updated>2019-03-25T16:39:26.710Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Ever had problem googling localized version of an error message? Then this site is for you!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://finderr.net&quot;
+        
+      
+    
+    </summary>
+    
+      <category term=".NET" scheme="https://do-it-ger.github.io/categories/NET/"/>
+    
+      <category term="Windows" scheme="https://do-it-ger.github.io/categories/NET/Windows/"/>
+    
+    
+      <category term="Localized Error" scheme="https://do-it-ger.github.io/tags/Localized-Error/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MS SQL: Date Format </title>
+    <link href="https://do-it-ger.github.io/2019/03/25/MS-SQL-Date-Format/"/>
+    <id>https://do-it-ger.github.io/2019/03/25/MS-SQL-Date-Format/</id>
+    <published>2019-03-25T16:33:00.000Z</published>
+    <updated>2019-03-25T16:35:32.584Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Date-without-time&quot;&gt;&lt;a href=&quot;#Date-without-time&quot; class=&quot;headerlink&quot; title=&quot;Date without time&quot;&gt;&lt;/a&gt;Date without time&lt;/h2&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="SQL" scheme="https://do-it-ger.github.io/categories/SQL/"/>
+    
+    
+      <category term="SQL" scheme="https://do-it-ger.github.io/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Unblock all Files in Folder with PowerShell</title>
+    <link href="https://do-it-ger.github.io/2019/03/25/Unblock-all-Files-in-Folder-with-PowerShell/"/>
+    <id>https://do-it-ger.github.io/2019/03/25/Unblock-all-Files-in-Folder-with-PowerShell/</id>
+    <published>2019-03-25T16:07:00.000Z</published>
+    <updated>2019-03-25T16:16:43.119Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Unblocks files that were downloaded from the Internet with PowerShell:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dir C:\Users\doswa\Downloads |
+        
+      
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://do-it-ger.github.io/categories/Windows/"/>
+    
+    
+      <category term="PowerShell" scheme="https://do-it-ger.github.io/tags/PowerShell/"/>
+    
+  </entry>
   
   <entry>
     <title>Get Licenses from used NuGet Packages for .NET Core Solution</title>
