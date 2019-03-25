@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</loc>
+    
+    <lastmod>2019-03-25T13:40:07.507Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://do-it-ger.github.io/tags/index.html</loc>
     
     <lastmod>2019-03-20T17:30:29.013Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://do-it-ger.github.io/categories/index.html</loc>
     
     <lastmod>2019-03-20T17:30:20.309Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://do-it-ger.github.io/2019/03/19/Get-Licenses-from-used-NuGet-Packages/</loc>
-    
-    <lastmod>2019-03-20T17:22:11.361Z</lastmod>
     
   </url>
   
