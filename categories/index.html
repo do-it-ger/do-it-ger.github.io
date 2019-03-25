@@ -160,6 +160,33 @@
     
 
 
+    <style>
+            .flexboxList {
+              display: -webkit-flex;
+              display: flex;
+              -webkit-flex-flow: row wrap;
+              flex-flow: row wrap;
+            }
+            
+            .item {
+              -webkit-flex: 1 auto;
+              flex: 1 auto;
+              padding: 0.5rem;
+              text-align: center;
+            }
+            
+            .item a {
+              display: block;
+              background-color: rgb(136, 182, 212);
+              text-decoration: none;
+              padding: 0.5rem 1rem;
+              border-radius: 3px;
+              color: #fff;
+            }
+            .item a:hover {
+                color: darkblue;
+            }
+                </style>
     <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
         <div class="container">
             <div class="row">
@@ -176,47 +203,54 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="flexboxList">
                 
-                    <div class="post-preview">
+                    <div class="post-preview item">
     <a href="/categories/Visual-Studio/">
         <h1 class="post-title archive">
             Visual Studio
         </h1>
     </a>
 </div>
+
                 
-                    <div class="post-preview">
+                    <div class="post-preview item">
     <a href="/categories/SQL/">
         <h1 class="post-title archive">
             SQL
         </h1>
     </a>
 </div>
+
                 
-                    <div class="post-preview">
+                    <div class="post-preview item">
     <a href="/categories/NET/">
         <h1 class="post-title archive">
             .NET
         </h1>
     </a>
 </div>
+
                 
-                    <div class="post-preview">
+                    <div class="post-preview item">
     <a href="/categories/Windows/">
         <h1 class="post-title archive">
             Windows
         </h1>
     </a>
 </div>
+
                 
-                    <div class="post-preview">
+                    <div class="post-preview item">
     <a href="/categories/NET/Windows/">
         <h1 class="post-title archive">
             Windows
         </h1>
     </a>
 </div>
+
                 
+                </div>
                 <div class="archive-before-pagination"></div>
             </div>
         </div>
