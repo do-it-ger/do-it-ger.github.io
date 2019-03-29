@@ -615,3 +615,7 @@ pre .clojure .title {
 pre .deletion {
   color: #dc322f;
 }
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+  background-color: #eee !important;
+}
