@@ -203,7 +203,7 @@
 
 
     <style>
-            .flexboxList {
+            /* .flexboxList {
               display: -webkit-flex;
               display: flex;
               -webkit-flex-flow: row wrap;
@@ -219,20 +219,29 @@
             
             .item a {
               display: block;
-              background-color: rgb(136, 182, 212);
+              background-color: #777;
               text-decoration: none;
-              padding: 0.5rem 1rem;
-              border-radius: 3px;
-              color: #fff;
+              padding: 10px;
+              border-radius: 2px;
+              color: #eee;
             }
             .item a:hover {
                 color: darkblue;
-            }
-                </style>
+            } */
+            .bd-items {
+                padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+    box-sizing: border-box;
+}
+.btn { margin: 10px;
+}
+     </style>
     <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-lg-10 col-lg-offset-2 col-md-12 col-md-offset-1">
                     <div class="site-heading">
                         <h1>Categories</h1>
                     </div>
@@ -245,51 +254,41 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="flexboxList">
+                <div class="bd-items">
                 
-                    <div class="post-preview item">
-    <a href="/categories/Windows/">
-        <h1 class="post-title archive">
-            Windows
-        </h1>
-    </a>
-</div>
-
-                
-                    <div class="post-preview item">
-    <a href="/categories/NET/">
-        <h1 class="post-title archive">
-            .NET
-        </h1>
-    </a>
-</div>
-
-                
-                    <div class="post-preview item">
-    <a href="/categories/SQL/">
-        <h1 class="post-title archive">
-            SQL
-        </h1>
-    </a>
-</div>
-
-                
-                    <div class="post-preview item">
+                    <button type="button" class="btn btn-outline-info post-title archive">
     <a href="/categories/Visual-Studio/">
-        <h1 class="post-title archive">
-            Visual Studio
-        </h1>
+        Visual Studio     
     </a>
-</div>
+</button>
 
                 
-                    <div class="post-preview item">
-    <a href="/categories/NET/Windows/">
-        <h1 class="post-title archive">
-            Windows
-        </h1>
+                    <button type="button" class="btn btn-outline-info post-title archive">
+    <a href="/categories/NET/">
+        .NET     
     </a>
-</div>
+</button>
+
+                
+                    <button type="button" class="btn btn-outline-info post-title archive">
+    <a href="/categories/SQL/">
+        SQL     
+    </a>
+</button>
+
+                
+                    <button type="button" class="btn btn-outline-info post-title archive">
+    <a href="/categories/Windows/">
+        Windows     
+    </a>
+</button>
+
+                
+                    <button type="button" class="btn btn-outline-info post-title archive">
+    <a href="/categories/NET/Windows/">
+        Windows     
+    </a>
+</button>
 
                 
                 </div>
