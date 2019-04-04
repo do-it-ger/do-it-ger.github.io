@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://do-it-ger.github.io/2019/04/04/Private-NuGet-Server-BaGet-on-Docker/</loc>
+    
+    <lastmod>2019-04-04T17:28:23.643Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://do-it-ger.github.io/privacy/index.html</loc>
     
     <lastmod>2019-03-30T14:09:44.715Z</lastmod>
